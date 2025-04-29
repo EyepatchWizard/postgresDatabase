@@ -1,5 +1,6 @@
 package com.sazzad.postgresDatabase.domain;
 
+import com.sazzad.postgresDatabase.dao.impl.BookDaoImpl;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
