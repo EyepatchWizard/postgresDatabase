@@ -1,5 +1,6 @@
 package com.sazzad.postgresDatabase.dao.impl;
 
+import com.sazzad.postgresDatabase.TestDataUtil;
 import com.sazzad.postgresDatabase.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,11 +25,7 @@ public class BookDaoImplTests {
     @Test
     public void testThatCreateBookGeneratesCorrectSql(){
 
-       Book book = Book.builder()
-               .isbn("978-1-2345-6789-0")
-               .title("The Shadow In The Attic")
-               .authorId(1L)
-               .build();
+       Book book = TestDataUtil.createTestBook();
 
         underTest.create(book);
 
